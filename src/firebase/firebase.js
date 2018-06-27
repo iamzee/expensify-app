@@ -8,25 +8,26 @@ const config = {
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
 };
+
 firebase.initializeApp(config);
 
 const database = firebase.database();
 
 export { firebase, database as default };
 
-// // database
-// //   .ref('expenses')
-// //   .once('value')
-// //   .then(snapshot => {
-// //     const expenses = [];
-// //     snapshot.forEach(childSnapshot => {
-// //       expenses.push({
-// //         id: childSnapshot.key,
-// //         ...childSnapshot.val()
-// //       });
-// //     });
-// //     console.log(expenses);
-// //   });
+// database
+//   .ref('expenses')
+//   .once('value')
+//   .then(snapshot => {
+//     const expenses = [];
+//     snapshot.forEach(childSnapshot => {
+//       expenses.push({
+//         id: childSnapshot.key,
+//         ...childSnapshot.val()
+//       });
+//     });
+//     console.log(expenses);
+//   });
 
 // //-------child_removed
 // database.ref('expenses').on('child_removed', snapshot => {
